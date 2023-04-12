@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <script type="text/javascript" src="./js/character.js"></script>
-    <title>Heroic Seige</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2619/2619285.png"> <title>Mythic Seige</title>
   </head>
   <body>
     <div id="charSelect" class="container" style="text-align: center;">
@@ -15,19 +14,66 @@
               <div class="card-body">
                 <h5 class="card-title">Wizard</h5>
                 <p class="card-text"> A powerful arcane spellcaster capable of fantastic tricks and spells weilding a spellsbook.</p>
-                <button id="wizard-attack" type="click" class="btn btn-primary">Wizard</button>
+                <p class="card-text"> Attack: <span id = "wizard-attackstat"></span></p>
+                <p class="card-text"> Heath: <span id = "wizard-health"></span></p>
+                <p class="card-text"> Magic: <span id = "wizard-magic"></span></p>
+                <p class="card-text"> Mana: <span id = "wizard-mana"></span></p>
+                <button id="wizardState" type="click" class="btn btn-primary">Wizard</button>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/images/War.png" class="card-img-top" alt="An image of Wizard">
+              <div class="card-body">
+                <h5 class="card-title">Warrior</h5>
+                <p class="card-text"> A fierce, skilled fighter, specializing in close combat and equipped with heavy armor and weapons.</p>
+                <p class="card-text"> Heath: <span id = "warrior-health"></span></p>
+                <p class="card-text"> Magic: <span id = "warrior-magic"></span></p>
+                <p class="card-text"> Mana: <span id = "warrior-mana"></span></p>
+                <button id="warrior-attack" type="click" class="btn btn-primary">Warrior</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="hidden">
+<div class="container" id="battleScreen">
+  <div class="container">
+    <div id="charInfo" class="hidden">
+      <div class="row" style="margin-bottom: 3%">
+        <div class="col-6" id="hero">
+          <div class="card" style="width: 30 rem;">
+            <!-- <img id=" character seleted img --> 
+            <div class="card-body">
+              <h5 style="text-align: center;">Name: <span id="heroName"></span> Lvl: <span id="heroLevel"></span></h5>
+              <h4 style="text-align: center;" class="card-title">Character stats: </h4>
+                  <p>Health: <span id="heroHealth"></span> <span id="atkDamage"></span></p>
+                  <p>Attack: <span id="heroAttack"></span></p>
+                  <p>Magic Attack: <span id="heroMagic"></span></p>
+                  <p>Mana: <span id="heroMana"></span></p>
+                  <p>Exp: <span id="heroExp"></span></p>
+                  <h1 id="dead"></h1>
+            </div>
+          </div>
+        </div>
+    
+
+
+
+
+
+
+
+
       <button id="show-state">Current Stats</button>
       <h1>Your Character's Stats</h1>
       <h3>
-        <div id="wizard-attack">attack me</div>
+        <div id="wizardState">stats could go here</div>
       </h3>
     </div>
+  </div>
+</div>
   </body>
 </html>
