@@ -1,4 +1,4 @@
-# :sword: _Mythic Seige_ :sword:
+# :hocho: _Mythic Seige_ :hocho:
 
 #### By: _**Mitchell Gantz, Eliot Gronstal, Erin Timlin, Bri**_
 
