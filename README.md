@@ -1,8 +1,8 @@
-# :hocho: _Mythic Seige_ :hocho:
+# :hocho: _Mythic Siege_ :hocho:
 
 #### By: _**Mitchell Gantz**_
 
-#### _A Web Application for a virtual Roll playing game of Blizzards Diablo games_
+#### _A Web Application for a virtual Roll Playing Game, Based and Themed from Blizzards Diablo series_
 
 ## Technologies Used
 
@@ -22,9 +22,12 @@
 
 ## Description
 
-_An RPG (Role Playing Game) is a game where players assume the roles of characters in a fictional world_
+_An RPG (Role Playing Game) is a game where players assume the roles of characters in a fictional world._
+_Pick a character and charge into battle against manya line up of powerful foes._
+_Winning a battle will grant you experience points to level up, along with some gold in your pocket to spend at the shop. (Shop functionality comming soon..)_
+_failure to defeat your opponent results in death, thus ending your siege_
 
-## Epicodus Prompt
+## Epicodus Lesson Prompt
 * Character creation: Use composition to generate different character types. Be creative with your character types... warriors, wizards, scientists, prom queen... whatever! Characters should have specific attributes. For instance, in a medieval RPG, characters might have strength and intelligence attributes among others. In an '80's high school RPG, characters might have snark and charm. You can add and even update these attributes using composition.
 
 * Battle system: Many RPGs have a battle system so characters can fight monsters, though that could just as easily be a high school “battle” system where the prom queen has a dance-off with the theater aficionado. Determine conditions for "winning" a battle, whether that's defeating monsters (with swords and spells doing damage), accumulating dance-off style points, or any other system you think of.
