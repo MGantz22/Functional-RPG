@@ -23,7 +23,7 @@
 ## Description
 
 _An RPG (Role Playing Game) is a game where players assume the roles of characters in a fictional world._
-_Pick a character and charge into battle against manya line up of powerful foes._
+_Pick a character and charge into battle against many powerful foes._
 _Winning a battle will grant you experience points to level up, along with some gold in your pocket to spend at the shop. (Shop functionality comming soon..)_
 _failure to defeat your opponent results in death, thus ending your siege_
 
