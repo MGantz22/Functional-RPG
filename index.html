@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2619/2619285.png"> <title>Mythic Seige</title>
+  </head>
+  <body>
+    <div id="charSelect" class="container" style="text-align: center;">
+      <div id="choose-char">
+        <h1 style="font-family: fantasy;"> Select Your Character:</h1>
+        <br>
+        <div class="row">
+          <div class="col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/images/Wizard.png" class="card-img-top" alt="An image of Wizard">
+              <div class="card-body">
+                <h5 class="card-title">Wizard</h5>
+                <p class="card-text"> A powerful spellcaster capable of fantastic tricks and devistating arcane spells, weilding an ancent spellsbook. Wizards are destructive at a distance but considered less effective in melee range</p>
+                <button id="wizard" type="click" class="btn btn-primary">Wizard</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/images/War.png" class="card-img-top" alt="An image of War">
+              <div class="card-body">
+                <h5 class="card-title">Warrior</h5>
+                <p class="card-text"> A close combat melee fighter highly trained in the arts of weaponry. Strong and quick on the battlefield, depends on heavy plate armor and battle prowess to defend themselves.</p>
+                <button id="warrior" type="click" class="btn btn-primary">Warrior</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/images/Monk.png" class="card-img-top" alt="An image of monk.">
+              <div class="card-body">
+                <h5 class="card-title">Monk</h5>
+                <p class="card-text">A sacred fighter channeling divine power through sheer force of will. They  utilize mantras for protection, healing and agression. Monks strike rapidly with fist attacks empowered with holy might.</p>
+                <button id="monk" type="click" class="btn btn-primary">Monk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="battleScreen">
+      <div class="container">
+        <div id="charInfo" class="hidden">
+          <div class="row" style="margin-bottom: 3%">
+            <div class="col-6" id="hero">
+              <div class="card" style="width: 30rem;">
+                <img id="charImg" class="card-img-top">
+                
+                <div class="card-body">
+                  <h5 style="text-align: center;"> <span id="heroName"></span> LVL: <span id="heroLevel"></span></h5>
+                  <h3 style="text-align: center;" class="card-title">Character Stats: </h3>
+                      <h5>Health: <span id="heroHealth"></span> <span id="atkDamage"></span></h5>
+                      <h5>Attack: <span id="heroAttack"></span></h5>
+                      <h5>Magic Attack: <span id="heroMagic"></span></h5>
+                      <h5>Mana: <span id="heroMana"></span></h5>
+                      <h5>Exp: <span id="heroExp"></span></h5>
+                      <h5>Gold: <span id="heroGold"></span></h5>
+                      <h1 id="dead"></h1>
+                </div>
+              </div>
+            </div>
+            <div class="hidden" id="monster-card">
+              <div class="col-6" id="hero">
+                <div class="card" style="width: 30rem;">
+                  <img id="monsterImg" class="card-img-top">
+                  <div class="card-body">
+                    <h2 id="monsterName"></h2>
+                    <h4 style="text-align: center;">Health: <span id="monsterHealth"></span> <span id="monsterAtkDamage"></span></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="moves" class="row hidden">
+          <div class="col-5" style="text-align: center;">
+            <button id="attack" type="click" class="btn btn-success" style="margin-right: 2%">Melee Attack</button>
+            <button id="magic" type="click" class="btn btn-warning" style="margin-right: 2%">Magic Attack</button><br><br>
+            <button id="heal" type="click" class="btn btn-light"> Health Pot (WIP)</button>
+            <button id="mana" type="click" class="btn btn-light"> Mana Pot (WIP)</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="locations" class="hidden" style="margin-top: 10%; text-align: center;">
+        <button id="fight" type="click" class="btn btn-info" style="margin-right: 2%">Seige Forward</button>
+        <button id="shop" type="click" class="btn btn-info">Stop to Shop</button>
+      </div>
+
+      <div id="choice" class="hidden" style="margin-top: 10%; text-align: center;">
+        <button id="engage" type="click" class="btn btn-success" style="margin-right: 2%">Engage battle</button>
+        <button id="leave" type="click" class="btn btn-danger"> Turn and Flee</button>
+      </div>
+
+      <div id="reset" class="" style="margin-top: 10%; text-align: center;">
+        <button id="restart" type="click" class="btn btn-light">Restart Seige</button>
+      </div>
+    </div>
+
+    <div class="hidden" id="shopScreen">
+      <h1><button id="close-shop" class="btn btn-danger mr-3">Close</button>  Sorry, Shop Comming soon...WIP</h1>
+      <h1 class="mt-2">Gold: <span id="shop-money">0</span></h1>
+      <br>
+      <div class="d-flex mt-3 text-center">
+        <div class="card mx-5">
+          <div class="card-body">
+            <h1 class="card-title">Health Pot</h1>
+            <img src="assets/images/health.png" alt="health potion image" class="card-img potion">
+            <p class="card-text mt-3">Cost: <span id="health-price">20</span></p>
+            <button class="btn btn-success">Buy</button>
+          </div>
+        </div>
+        <div class="card mx-5">
+          <div class="card-body">
+            <h1 class="card-title">Magic Pot</h1>
+            <img src="assets/images/mana.png" alt="magic potion image" class="card-img potion">
+            <p class="card-text mt-3">Cost: <span id="magic-price">20</span></p>
+            <button class="btn btn-success">Buy</button>
+          </div>
+        </div>
+        <div class="card mx-5">
+          <div class="card-body">
+            <h1 class="card-title">Strength Pot</h1>
+            <img src="assets/images/str.png" alt="strength potion image" class="card-img potion">
+            <p class="card-text mt-3">Cost: <span id="strength-price">20</span></p>
+            <button class="btn btn-success">Buy</button>
+          </div>
+        </div>
+        <div class="card mx-5">
+          <div class="card-body">
+            <h1 class="card-title">Random Pot</h1>
+            <img src="assets/images/random.png" alt="random potion image" class="card-img potion">
+            <p class="card-text mt-3">Cost: <span id="random-price">10</span></p>
+            <button class="btn btn-success">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<script src="bundle.js"></script></body>
+</html>
