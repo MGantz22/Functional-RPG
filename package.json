@@ -1,8 +1,8 @@
 {
-  "name": "template",
+  "name": "Mythic Seige",
   "version": "1.0.0",
   "repository": {
-    "url": "https://github.com/MGantz22/Functional-RPG.git"
+    "url": "git+https://github.com/MGantz22/Functional-RPG.git"
   },
   "description": "",
   "main": "index.js",

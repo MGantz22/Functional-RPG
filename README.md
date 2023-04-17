@@ -1,8 +1,8 @@
 # :hocho: _Mythic Seige_ :hocho:
 
-#### By: _**Mitchell Gantz, Eliot Gronstal, Erin Timlin, Bri**_
+#### By: _**Mitchell Gantz**_
 
-#### _A Web Application for a virtual Roll playing game_
+#### _A Web Application for a virtual Roll playing game of Blizzards Diablo games_
 
 ## Technologies Used
 
@@ -37,20 +37,25 @@ _An RPG (Role Playing Game) is a game where players assume the roles of characte
 ## Setup/Installation Requirements
 
 * _clone the repository to your desktop from: https://github.com/MGantz22/Functional-RPG.git_
-* _enter command in terminal: $ `npm install`_
-* _enter command in terminal: $ `npm run build`_
-* _enter command in terminal: $ `npm run start`_
+* _Navigate to the root directory named `Functional-RPG`_
+* _Enter command in terminal: $ `npm install`_
+* _Enter command in terminal: $ `npm run build`_
+* _Enter command in terminal: $ `npm run start`_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No functionality has been added to the shop, can't buy potions yet. WIP_
+* _When you turn to flee, the shop button doesn't appear_
+
+
+## Thanks
+* To Blizzard Entertainments Diablo game for names and Images.
 
 ## License
 
-_Copyright (c) 2023 Mitchell Gantz, Eliot Gronstal, Erin Timlin, Bri_
+_Copyright (c) 2023 Mitchell Gantz_
 
 _Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
 

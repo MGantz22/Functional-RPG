@@ -1,17 +1,14 @@
 //Business Logic
-
 export const storeState = (name) => {
   let currentState = { name: name };
-  return (stateChangeFunction = (state) => state) => {
+  return (stateChangeFunction = state => state) => {
     const newState = stateChangeFunction(currentState);
-    currentState = {...newState};
+    currentState = { ...newState };
     return newState;
   };
 };
 
-// export const stateControl = storeState();
-
-export const stateControlWizard = storeState();
+export const stateControl = storeState();
 
 
 const incrementState = (prop) => {
@@ -31,6 +28,7 @@ export const incMagic = incrementState("magic");
 export const incMaxMana = incrementState("maxMana");
 export const incMana = incrementState("mana");
 export const incExp = incrementState("exp");
+export const incGold = incrementState("gold");
 export const incAttackPercent = incrementState("atkPercent");
 export const incMagicPercent = incrementState("magPercent");
 
@@ -46,74 +44,86 @@ const decrementState = (prop) => {
 export const decHealth = decrementState("health");
 export const decAttack = decrementState("attack");
 export const decMagic = decrementState("magic");
-export const decMaxMana = decrementState("maxMana");
 export const decMana = decrementState("mana");
 export const decExp = decrementState("exp");
+export const decGold = decrementState("gold");
 
 //Character Function Factory
-// character();
-export const wizard = (character) => {
-  const character = incLevel(1);
+export const createWizard = (character) => {
+  character(incLevel(1));
   character(incMaxHealth(20));
   character(incHealth(20));
-  character(incAttack(10));
-  character(incMagic(2));
-  character(incMaxMana(5));
-  character(incMana(5));
+  character(incAttack(5));
+  character(incMagic(10));
+  character(incMaxMana(25));
+  character(incMana(25));
   character(incExp(0));
-  character(incAttackPercent(40));
+  character(incGold(0));
+  character(incAttackPercent(50));
   character(incMagicPercent(80));
 };
-// return {...state, ...createWizard(stateControl(state))};
-// };
 
-export const stateControlWarrior = storeState();
 
 export const createWarrior = (character) => {
   character(incLevel(1));
-  character(incMaxHealth(15));
-  character(incHealth(15));
-  character(incAttack(2));
-  character(incMagic(10));
-  character(incMaxMana(20));
-  character(incMana(20));
+  character(incMaxHealth(28));
+  character(incHealth(28));
+  character(incAttack(10));
+  character(incMagic(3));
+  character(incMaxMana(10));
+  character(incMana(10));
   character(incExp(0));
-  character(incAttackPercent(40));
-  character(incMagicPercent(80));
+  character(incGold(0));
+  character(incAttackPercent(80));
+  character(incMagicPercent(40));
+};
+
+export const createMonk = (character) => {
+  character(incLevel(1));
+  character(incMaxHealth(25));
+  character(incHealth(25));
+  character(incAttack(8));
+  character(incMagic(8));
+  character(incMaxMana(17));
+  character(incMana(17));
+  character(incExp(0));
+  character(incGold(0));
+  character(incAttackPercent(75));
+  character(incMagicPercent(65));
 };
 
 export const createSkeletonKing = (character) => {
-  character(incHealth(12));
-  character(incAttack(2));
+  character(incHealth(20));
+  character(incAttack(3));
   character(incExp(10));
   character(incAttackPercent(50));
 };
 
 export const createTheButcher = (character) => {
-  character(incHealth(13));
-  character(incAttack(2));
+  character(incHealth(25));
+  character(incAttack(5));
+  character(incExp(15));
+  character(incAttackPercent(50));
+};
+
+export const createMephisto = (character) => {
+  character(incHealth(22));
+  character(incAttack(5));
   character(incExp(20));
   character(incAttackPercent(60));
 };
 
-export const createMephisto = (character) => {
-  character(incHealth(15));
-  character(incAttack(2));
+export const createQueenAdria = (character) => {
+  character(incHealth(28));
+  character(incAttack(4));
   character(incExp(30));
   character(incAttackPercent(60));
 };
 
-export const createQueenAdria = (character) => {
-  character(incHealth(20));
-  character(incAttack(2));
-  character(incExp(40));
-  character(incAttackPercent(60));
-};
-
 export const createBaal = (character) => {
-  character(incHealth(25));
-  character(incAttack(5));
-  character(incExp(50));
+  character(incHealth(40));
+  character(incAttack(9));
+  character(incExp(40));
   character(incAttackPercent(60));
 };
 
@@ -138,22 +148,33 @@ export const magic = (character) => {
       return character().magic / 2;
     }
   } else {
-    document.getElementById("errorAtk").innerHTML = `NOT ENOUGH MANA!`;
+    document.getElementById("monsterAtkDamage").innerHTML = `NOT ENOUGH MANA!`;
   }
 };
 
-export const lvlup = (character) => {
-  if (character().exp >= 50) {
-    character(decExp(50));
+export const gainExp = (character, monster) => {
+  character(incExp(monster().exp));
+  return monster().exp;
+};
+
+export const gainGold = (character) => {
+  const gold = Math.floor(Math.random() * 5);
+  character(incGold(gold));
+  return gold;
+};
+
+export const lvlUp = (character) => {
+  if (character().exp >= 60) {
+    character(decExp(60));
     character(incLevel(1));
     character(incMaxHealth(5));
     character(incHealth(character().maxHealth - character().health));
     character(incAttack(2));
     character(incMagic(2));
     character(incMaxMana(3));
-    character(incMana(character().maxMana- character().mana));
+    character(incMana(character().maxMana - character().mana));
   }
-}
+};
 
 export const isDead = (character) => {
   return character().health <= 0;

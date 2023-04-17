@@ -21,9 +21,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Functional-RPG",
       template: "./src/index.html",
-      inject: "body",
-    }),
-    new Dotenv(),
+      inject: "body"
+    })
   ],
   module: {
     rules: [
@@ -39,14 +38,14 @@ module.exports = {
             options: {
               name: "[name].[ext]",
               outputPath: "assets/images/",
-            },
-          },
-        ],
+            }
+          }
+        ]
       },
       {
         test: /.html$/,
-        use: ["html-loader"],
-      },
-    ],
-  },
+        use: ["html-loader"]
+      }
+    ]
+  }
 };
